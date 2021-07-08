@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #1c46f1;
+
+/*
+    =================
+    All @mixin Here
+*/
+@mixin btn-style {
+  border: none;
+  outline: none;
+}
+@mixin none-style {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
