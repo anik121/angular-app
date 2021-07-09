@@ -1,6 +1,6 @@
 <header>
   <div class="row">
-    <div class="col-sm-6 left-item">
+    <div class="col-6 col-sm-6 left-item">
       <div class="notification">
         <button class="position-relative">
           <span
@@ -37,57 +37,19 @@
         <span>{{ subtitle }}</span>
       </div>
     </div>
-    <div class="col-sm-6 right-item">
+    <div class="col-6 col-sm-6 right-item">
       <ul>
-        <app-icon-btn
-          icon='<svg
-        stroke="currentColor"
-        fill="currentColor"
-        stroke-width="0"
-        viewBox="0 0 1024 1024"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M848 359.3H627.7L825.8 109c4.1-5.3.4-13-6.3-13H436c-2.8 0-5.5 1.5-6.9 4L170 547.5c-3.1 5.3.7 12 6.9 12h174.4l-89.4 357.6c-1.9 7.8 7.5 13.3 13.3 7.7L853.5 373c5.2-4.9 1.7-13.7-5.5-13.7zM378.2 732.5l60.3-241H281.1l189.6-327.4h224.6L487 427.4h211L378.2 732.5z"
-        ></path>
-      </svg>'
-        ></app-icon-btn>
-        <app-icon-btn
-          icon='<svg
-        stroke="currentColor"
-        fill="none"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>'
-        >
-        </app-icon-btn>
-        <app-icon-btn
-          icon='<svg
-        stroke="currentColor"
-        fill="currentColor"
-        stroke-width="0"
-        viewBox="0 0 20 20"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
-          clip-rule="evenodd"
-        ></path>
-      </svg>'
-        ></app-icon-btn>
+        <li [ngClass]="activeMenu ? 'active' : 'unActive'">
+          <button (click)="onActiveMenu()"><i class="bi-lightning"></i></button>
+        </li>
+        <li [ngClass]="searchMenu ? 'active' : 'unActive'">
+          <button (click)="onSearchMenu()"><i class="bi-search"></i></button>
+        </li>
+        <li [ngClass]="filterMenu ? 'active' : 'unActive'">
+          <button (click)="onFilterMenu()">
+            <i class="bi-funnel-fill"></i>
+          </button>
+        </li>
       </ul>
     </div>
   </div>

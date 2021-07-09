@@ -37,6 +37,26 @@ header {
       @include none-style;
       display: flex;
       justify-content: space-between;
+      li {
+        button {
+          font-size: 30px;
+          background-color: transparent;
+          @include btn-style;
+          color: white;
+          border-radius: 5px;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s;
+        }
+        &.active {
+          button {
+            background-color: #ff8d0e;
+          }
+        }
+      }
     }
   }
 }

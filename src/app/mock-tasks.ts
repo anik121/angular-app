@@ -36,4 +36,18 @@ export const TASKS: Task[] = [
     completePercent: 52,
     timer: 1625728669686,
   },
+   {
+    id: 5,
+    title: 'Start to working on Git Tourer',
+    user: 1,
+    completePercent: 74,
+    timer: 1625728869686,
+  },
+  {
+    id: 6,
+    title: 'Create Task App',
+    user: 1,
+    completePercent: 52,
+    timer: 1625728669686,
+  },
 ];

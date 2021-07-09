@@ -11,4 +11,23 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  activeMenu: boolean = false;
+  searchMenu: boolean = false;
+  filterMenu: boolean = false;
+  onActiveMenu() {
+    this.activeMenu = !this.activeMenu;
+    this.searchMenu = false;
+    this.filterMenu = false;
+  }
+  onSearchMenu() {
+    this.activeMenu = false;
+    this.searchMenu = !this.searchMenu;
+    this.filterMenu = false;
+  }
+  onFilterMenu() {
+    this.activeMenu = false;
+    this.searchMenu = false;
+    this.filterMenu = !this.filterMenu;
+  }
 }
