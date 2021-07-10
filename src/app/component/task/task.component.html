@@ -2,7 +2,10 @@
   <div class="row">
     <div class="col-10 col-sm-10 task-title-box">
       <p class="task-title">{{ task.title }}</p>
-      <span class="task-complete">{{ task.completePercent }}% Completed.</span>
+      <span class="task-complete"
+        >{{ task.completePercent }}% Completed.
+        {{ showingDate(task.timer) }}</span
+      >
     </div>
     <!-- End Task Title Part -->
     <div class="user-in-task col-2 col-sm-2">
