@@ -8,10 +8,11 @@ import { HeaderComponent } from './component/header/header.component';
 import { TaskComponent } from './component/task/task.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { TaskService } from './service/task.service';
-import { SettingComponent } from './component/setting/setting.component';
-import { NoteListComponent } from './component/note-list/note-list.component';
-import { CreateTaskComponent } from './component/create-task/create-task.component';
-import { HomeComponent } from './component/home/home.component';
+import { SettingComponent } from './pages/setting/setting.component';
+import { NoteListComponent } from './pages/note-list/note-list.component';
+import { CreateTaskComponent } from './pages/create-task/create-task.component';
+import { HomeComponent } from './pages/home/home.component';
+import { TaskHeaderComponent } from './pages/note-list/task-header/task-header.component';
 
 const appRoutes: Routes = [
   {
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     NoteListComponent,
     CreateTaskComponent,
     HomeComponent,
+    TaskHeaderComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [TaskService],

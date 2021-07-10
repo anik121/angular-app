@@ -23,3 +23,12 @@ $primary-color: #1c46f1;
 body {
   background-color: #343a40 !important;
 }
+
+.main-content-wrapper {
+  background-color: #f7f7f7;
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  padding: 20px 10px;
+  overflow: auto;
+  height: calc(100% - 68px);
+}

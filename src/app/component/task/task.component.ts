@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { TaskService } from '../../service/task.service';
+import { Component, OnInit } from '@angular/core';
+import { TaskService } from 'src/app/service/task.service';
 
 interface Task {
   id: number;

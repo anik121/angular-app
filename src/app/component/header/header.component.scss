@@ -1,62 +1,11 @@
-@import "../../../styles";
+@import '/src/styles';
 
 header {
   background-color: $primary-color;
-  padding: 10px;
-  .left-item {
-    display: flex;
-    align-items: center;
-    .notification {
-      button {
-        background-color: transparent;
-        color: white;
-        @include btn-style;
-        .badge {
-          background-color: #ff8d0e;
-        }
-        svg {
-          width: 25px;
-          height: 25px;
-        }
-      }
-    }
-    .info {
-      margin-left: 20px;
-      p {
-        margin: 0;
-        color: white;
-      }
-      span {
-        color: rgba(255, 255, 255, 0.7);
-      }
-    }
-  }
-  .right-item {
-    padding-top: 3px;
-    ul {
-      @include none-style;
-      display: flex;
-      justify-content: space-between;
-      li {
-        button {
-          font-size: 30px;
-          background-color: transparent;
-          @include btn-style;
-          color: white;
-          border-radius: 5px;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s;
-        }
-        &.active {
-          button {
-            background-color: #ff8d0e;
-          }
-        }
-      }
-    }
+  padding: 20px 10px;
+  p {
+    color: white;
+    font-size: 18px;
+    margin: 0;
   }
 }
