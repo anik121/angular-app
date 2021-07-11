@@ -1,0 +1,21 @@
+<div class="top-food-list">
+  <header class="d-flex justify-content-between align-items-center">
+    <div>
+      <h3 class="title">Today New Arivable</h3>
+      <p>Best of the today food list update</p>
+    </div>
+    <a routerLink="/food_list">See All <i class="bi-chevron-right"></i></a>
+  </header>
+
+  <swiper [slidesPerView]="2" [spaceBetween]="20">
+    <ng-template swiperSlide *ngFor="let food of foods">
+      <div class="top-food-item">
+        <img class="img-fluid" src="{{ food.imgPath }}" alt="" />
+        <h2 class="food-name">{{ food.name }}</h2>
+        <p class="food-location">
+          <i class="bi-geo-alt-fill"></i> {{ food.location }}
+        </p>
+      </div>
+    </ng-template>
+  </swiper>
+</div>

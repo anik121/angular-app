@@ -1,0 +1,61 @@
+@import '/src/styles';
+header {
+  nav {
+    .navbar-menu {
+      width: 35px;
+      height: 25px;
+      position: relative;
+      background-color: white;
+      @extend .btn-appearance;
+      &:hover {
+        span {
+          &:nth-child(1) {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            width: 70%;
+          }
+          &:nth-child(3) {
+            width: 100%;
+          }
+        }
+      }
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #777;
+        transition: width 0.3s;
+        &:nth-child(1) {
+          width: 70%;
+        }
+        &:nth-child(2) {
+          top: 10px;
+        }
+        &:nth-child(3) {
+          width: 70%;
+          top: 20px;
+        }
+      }
+    }
+    p.user-location {
+      margin: 0;
+      font-weight: 600;
+      i {
+        color: $primary-color;
+        margin-right: 10px;
+      }
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

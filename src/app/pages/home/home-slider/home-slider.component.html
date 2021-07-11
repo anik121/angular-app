@@ -1,0 +1,10 @@
+<swiper
+  [slidesPerView]="1"
+  [spaceBetween]="20"
+  [pagination]="true"
+  class="promotional-slider"
+>
+  <ng-template swiperSlide *ngFor="let slider of sliders">
+    <img class="img-fluid" src="{{ slider.imgPath }}" alt="" />
+  </ng-template>
+</swiper>

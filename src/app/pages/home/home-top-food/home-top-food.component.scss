@@ -1,0 +1,47 @@
+@import '/src/styles';
+.top-food-list {
+  header {
+    margin-bottom: 20px;
+    .title,
+    p {
+      margin: 0;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 15px;
+      color: #555;
+    }
+    a {
+      color: #666;
+      font-size: 15px;
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+  }
+  // End Header
+  .top-food-item {
+    img {
+      border-radius: 10px 10px 0 0;
+    }
+    .food-name {
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+      font-size: 18px;
+    }
+    .food-location {
+      font-size: 14px;
+      display: flex;
+      margin: 0;
+      font-weight: 400;
+      color: #555;
+      i {
+        margin: 2px 5px 0 0;
+        color: $primary-color;
+      }
+    }
+  }
+}

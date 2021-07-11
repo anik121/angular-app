@@ -1,0 +1,28 @@
+@import '/src/styles';
+
+.form-group {
+  padding: 10px 0;
+  label {
+    background-color: #e7e5e5;
+    padding: 2px 20px;
+    border-radius: 15px;
+    i {
+      font-size: 20px;
+      color: #888;
+    }
+    input {
+      @extend .btn-appearance;
+      background-color: transparent;
+      box-shadow: none;
+      &::placeholder {
+        font-size: 14px;
+      }
+      &:focus {
+        &::placeholder {
+          padding-left: 10px;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
