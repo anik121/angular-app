@@ -1,6 +1,8 @@
 <header>
   <nav class="navbar d-flex justify-content-between">
-    <button class="navbar-menu"><span></span><span></span><span></span></button>
+    <button (click)="openSidebar()" class="navbar-menu">
+      <span></span><span></span><span></span>
+    </button>
     <p class="user-location d-flex align-items-center">
       <i class="bi-geo-alt-fill"></i> Agrabad 345, Chittagong
     </p>
@@ -9,3 +11,47 @@
     </div>
   </nav>
 </header>
+<!-- End Home Header Part -->
+<div
+  (click)="closeSidebar()"
+  [ngClass]="openMenu ? 'active' : 'unActive'"
+  class="sidebar-overlay"
+></div>
+<!-- End Overlay -->
+<aside [ngClass]="openMenu ? 'active' : 'unActive'" class="sidebar">
+  <div class="user-info">
+    <img class="bg-img-layer" src="assets/img/banner/banner1.png" alt="" />
+    <a
+      class="d-flex justify-content-between align-items-center"
+      routerLink="/user_setting"
+    >
+      <div class="d-flex align-items-center info-wrapper">
+        <img src="assets/img/user/avatar.png" alt="" />
+        <div>
+          <h4 class="user-name">Anik Ishaan</h4>
+          <span>View Profile</span>
+        </div>
+      </div>
+      <i class="bi-gear"></i>
+    </a>
+  </div>
+
+  <ul>
+    <li>
+      <a routerLink="/"><i class="bi-house"></i> Home</a>
+    </li>
+    <li>
+      <a routerLink="/"><i class="bi-list-stars"></i> Hotel List</a>
+    </li>
+    <li>
+      <a routerLink="/"><i class="bi-egg"></i> Food List</a>
+    </li>
+    <li>
+      <a routerLink="/"><i class="bi-gear"></i> Setting</a>
+    </li>
+    <li>
+      <a routerLink="/"><i class="bi-info-square"></i> About us</a>
+    </li>
+  </ul>
+</aside>
+<!-- End Sidebar For Mobile -->

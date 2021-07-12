@@ -5,13 +5,31 @@
       routerLink="/"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      ><i class="bi-house"></i
+      #route1Active="routerLinkActive"
+      ><i [ngClass]="route1Active.isActive ? 'bi-house-fill' : 'bi-house'"></i
     ></a>
-    <a class="link" routerLinkActive="active" routerLink="/booking_history"
-      ><i class="bi-bookmark-check"></i>
+    <!-- End Single Route -->
+    <a
+      class="link"
+      [class.myClass]="false"
+      routerLinkActive="active"
+      routerLink="/booking_history"
+      #route2Active="routerLinkActive"
+      ><i
+        [ngClass]="
+          route2Active.isActive ? 'bi-bookmark-check-fill' : 'bi-bookmark-check'
+        "
+      ></i>
     </a>
-    <a class="link" routerLinkActive="active" routerLink="/user_setting"
-      ><i class="bi-person"></i
+    <!-- End Single Route -->
+
+    <a
+      class="link"
+      routerLinkActive="active"
+      routerLink="/user_setting"
+      #route3Active="routerLinkActive"
+      ><i [ngClass]="route3Active.isActive ? 'bi-person-fill' : 'bi-person'"></i
     ></a>
+    <!-- End Single Route -->
   </nav>
 </footer>
