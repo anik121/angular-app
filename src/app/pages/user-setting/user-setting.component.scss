@@ -1,0 +1,46 @@
+@import '/src/styles';
+.wrapper {
+  padding: 20px;
+  .menu-list,
+  header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+  header {
+    .user-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .user-name {
+      font-weight: 600;
+      margin: 0;
+    }
+    .user-mail {
+      color: #777;
+    }
+    button {
+      background-color: white;
+      @extend .btn-appearance;
+      font-size: 25px;
+    }
+  }
+  .menu-list {
+    list-style-type: none;
+    margin-top: 40px;
+    li {
+      a {
+        font-size: 18px;
+        padding: 6px 0;
+        display: block;
+        font-weight: 500;
+        i {
+          font-size: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { SLIDER } from '../mock/mock-slider';
 import { FOOD } from '../mock/mock-food';
 import { HOTEL } from '../mock/mock-hotel';
+import { USER } from '../mock/mock-user';
 interface Slider {
   id: number;
   imgPath: string;
@@ -22,7 +23,13 @@ interface Hotel {
   description: string;
   imgPath: string;
 }
-
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  location: string;
+  avatar: string;
+}
 @Injectable({
   providedIn: 'root',
 })
@@ -39,5 +46,9 @@ export class SliderService {
   getHotel(): Observable<Hotel[]> {
     const hotel = of(HOTEL);
     return hotel;
+  }
+  getUser(): Observable<User[]> {
+    const user = of(USER);
+    return user;
   }
 }
