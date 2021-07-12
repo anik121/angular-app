@@ -1,1 +1,22 @@
-<p>booking-history works!</p>
+<app-header title="Booking History"></app-header>
+<div class="wrapper">
+  <ul>
+    <li *ngFor="let hotel of hotels">
+      <div class="hotel-img">
+        <img src="{{ hotel.imgPath }}" alt="{{ hotel.name }}" />
+      </div>
+      <div class="hotel-info">
+        <h3 class="title d-flex justify-content-between">
+          <span class="hotel-name">{{ hotel.name }}</span>
+          <span class="hotel-price">${{ hotel.price.toFixed(2) }}</span>
+        </h3>
+        <div class="d-flex mt-2 justify-content-between align-items-center">
+          <p class="hotel-location d-flex">
+            <i class="bi-geo-alt-fill"></i> {{ hotel.location }}
+          </p>
+          <a routerLink="/booking" class="btn c-btn-primary">Check</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
