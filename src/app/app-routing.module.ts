@@ -20,7 +20,7 @@ const routes: Routes = [
     component: UserSettingComponent,
   },
   {
-    path: 'map',
+    path: 'map/:id',
     component: MapLocationComponent,
   },
   {
