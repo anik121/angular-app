@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingHistoryComponent } from './pages/booking-history/booking-history.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HotelDetailsComponent } from './pages/hotel-details/hotel-details.component';
 import { MapLocationComponent } from './pages/map-location/map-location.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { UserSettingComponent } from './pages/user-setting/user-setting.component';
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'booking_history',
     component: BookingHistoryComponent,
+  },
+  {
+    path: 'hotel_details',
+    component: HotelDetailsComponent,
   },
   {
     path: 'user_setting',

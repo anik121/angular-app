@@ -17,6 +17,7 @@ import { HomeBookingRestaurantComponent } from './pages/home/home-booking-restau
 import { HomeSearchComponent } from './pages/home/home-search/home-search.component';
 import { SwiperModule } from 'swiper/angular';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { HotelDetailsComponent } from './pages/hotel-details/hotel-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
     HomeBookingRestaurantComponent,
     HomeSearchComponent,
     SidebarComponent,
+    HotelDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule],
   providers: [],

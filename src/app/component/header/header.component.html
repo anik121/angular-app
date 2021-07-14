@@ -1,9 +1,19 @@
 <header>
-  <button (click)="openSidebar()" class="navbar-menu">
-    <span></span><span></span><span></span>
-  </button>
-  <p>{{ title }}</p>
+  <ng-container *ngIf="hasSidebar; else noneSidebarContainer">
+    <button (click)="openSidebar()" class="navbar-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <p>{{ title }}</p>
+  </ng-container>
+
+  <ng-template #noneSidebarContainer>
+    <a class="navbar-link" [routerLink]="routerLinkSet"
+      ><i class="bi-chevron-left"></i
+    ></a>
+    <p>{{ title }}</p>
+  </ng-template>
 </header>
+
 <app-sidebar
   [openMenu]="openMenu"
   [closeSidebar]="closeSidebar()"

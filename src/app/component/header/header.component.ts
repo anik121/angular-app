@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() title: string | null = null;
+  @Input() hasSidebar: boolean = true;
+  @Input() routerLinkSet: string = '/';
   constructor() {}
 
   ngOnInit(): void {}

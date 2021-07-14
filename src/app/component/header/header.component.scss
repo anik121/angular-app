@@ -1,7 +1,7 @@
 @import '/src/styles';
 header {
   background-color: $primary-color;
-  padding: 20px 10px;
+  padding: 20px;
   margin-bottom: 20px;
   border-radius: 0 0 10px 10px;
   display: flex;
@@ -14,7 +14,11 @@ header {
     font-size: 18px;
     text-transform: capitalize;
   }
-
+  .navbar-link {
+    color: white;
+    font-size: 22px;
+    margin-right: 30px;
+  }
   .navbar-menu {
     width: 35px;
     height: 25px;
