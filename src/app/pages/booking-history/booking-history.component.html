@@ -1,6 +1,6 @@
 <app-header title="Booking History"></app-header>
 <div class="wrapper">
-  <ul>
+  <ul *ngIf="hotels.length > 0; else hotelList">
     <li *ngFor="let hotel of hotels">
       <div class="hotel-img">
         <img src="{{ hotel.imgPath }}" alt="{{ hotel.name }}" />
@@ -19,4 +19,14 @@
       </div>
     </li>
   </ul>
+  <ng-template #hotelList>
+    <div class="text-center">
+      <h1 class="not-found-title">You have no hotel booking information.</h1>
+      <img
+        class="not-found-item"
+        src="/assets/img/svg/notFoundItem.svg"
+        alt=""
+      />
+    </div>
+  </ng-template>
 </div>
