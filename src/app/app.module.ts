@@ -16,6 +16,7 @@ import { HomeTopFoodComponent } from './pages/home/home-top-food/home-top-food.c
 import { HomeBookingRestaurantComponent } from './pages/home/home-booking-restaurant/home-booking-restaurant.component';
 import { HomeSearchComponent } from './pages/home/home-search/home-search.component';
 import { SwiperModule } from 'swiper/angular';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { SwiperModule } from 'swiper/angular';
     HomeTopFoodComponent,
     HomeBookingRestaurantComponent,
     HomeSearchComponent,
+    SidebarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule],
   providers: [],

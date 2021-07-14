@@ -10,4 +10,14 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  openMenu: boolean = false;
+
+  openSidebar() {
+    this.openMenu = true;
+  }
+
+  closeSidebar() {
+    this.openMenu = false;
+  }
 }

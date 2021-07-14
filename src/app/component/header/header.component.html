@@ -1,3 +1,10 @@
 <header>
+  <button (click)="openSidebar()" class="navbar-menu">
+    <span></span><span></span><span></span>
+  </button>
   <p>{{ title }}</p>
 </header>
+<app-sidebar
+  [openMenu]="openMenu"
+  [closeSidebar]="closeSidebar()"
+></app-sidebar>

@@ -4,6 +4,8 @@ header {
   padding: 20px 10px;
   margin-bottom: 20px;
   border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
   p {
     margin: 0;
     text-align: center;
@@ -11,5 +13,46 @@ header {
     color: white;
     font-size: 18px;
     text-transform: capitalize;
+  }
+
+  .navbar-menu {
+    width: 35px;
+    height: 25px;
+    position: relative;
+    background-color: transparent;
+    margin-right: 40px;
+    @extend .btn-appearance;
+    &:hover {
+      span {
+        &:nth-child(1) {
+          width: 100%;
+        }
+        &:nth-child(2) {
+          width: 70%;
+        }
+        &:nth-child(3) {
+          width: 100%;
+        }
+      }
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(255, 255, 255);
+      transition: width 0.3s;
+      &:nth-child(1) {
+        width: 70%;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(3) {
+        width: 70%;
+        top: 20px;
+      }
+    }
   }
 }
