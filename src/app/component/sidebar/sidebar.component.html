@@ -23,20 +23,10 @@
   </div>
 
   <ul>
-    <li>
-      <a routerLink="/"><i class="bi-house"></i> Home</a>
-    </li>
-    <li>
-      <a routerLink="/"><i class="bi-list-stars"></i> Hotel List</a>
-    </li>
-    <li>
-      <a routerLink="/"><i class="bi-egg"></i> Food List</a>
-    </li>
-    <li>
-      <a routerLink="/"><i class="bi-gear"></i> Setting</a>
-    </li>
-    <li>
-      <a routerLink="/"><i class="bi-info-square"></i> About us</a>
+    <li *ngFor="let menu of menus">
+      <a [routerLink]="menu.uri">
+        <i [ngClass]="['bi-' + menu.icon]"></i> {{ menu.title }}
+      </a>
     </li>
   </ul>
 </aside>

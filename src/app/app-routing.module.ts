@@ -6,6 +6,9 @@ import { HotelDetailsComponent } from './pages/hotel-details/hotel-details.compo
 import { MapLocationComponent } from './pages/map-location/map-location.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { UserSettingComponent } from './pages/user-setting/user-setting.component';
+import { FoodListComponent } from './pages/food-list/food-list.component';
+import { AccountComponent } from './pages/user-setting/account/account.component';
+import { FeedbackComponent } from './pages/user-setting/feedback/feedback.component';
 
 const routes: Routes = [
   {
@@ -22,7 +25,15 @@ const routes: Routes = [
   },
   {
     path: 'user_setting',
-    component: UserSettingComponent,
+    children: [
+      { path: '', component: UserSettingComponent },
+      { path: ':id/account', component: AccountComponent },
+      { path: ':id/feedback', component: FeedbackComponent },
+    ],
+  },
+  {
+    path: 'food-list',
+    component: FoodListComponent,
   },
   {
     path: 'map/:id',

@@ -14,4 +14,11 @@ export const USER: User[] = [
     location: 'Dhaka Jatrabari',
     email: 'demo@gmail.com',
   },
+  {
+    id: 2,
+    name: 'Rifat Islam',
+    avatar: 'assets/img/user/avatar.png',
+    location: 'Dhaka Jatrabari',
+    email: 'rifat@gmail.com',
+  },
 ];

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,9 @@ import { HomeSearchComponent } from './pages/home/home-search/home-search.compon
 import { SwiperModule } from 'swiper/angular';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { HotelDetailsComponent } from './pages/hotel-details/hotel-details.component';
+import { FoodListComponent } from './pages/food-list/food-list.component';
+import { AccountComponent } from './pages/user-setting/account/account.component';
+import { FeedbackComponent } from './pages/user-setting/feedback/feedback.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +39,11 @@ import { HotelDetailsComponent } from './pages/hotel-details/hotel-details.compo
     HomeSearchComponent,
     SidebarComponent,
     HotelDetailsComponent,
+    FoodListComponent,
+    AccountComponent,
+    FeedbackComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SwiperModule],
+  imports: [BrowserModule, AppRoutingModule, SwiperModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

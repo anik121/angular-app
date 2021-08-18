@@ -1,0 +1,68 @@
+<app-header
+  title="Account"
+  [hasSidebar]="false"
+  routerLinkSet="/user_setting"
+></app-header>
+<!-- End Header Part -->
+<div class="wrapper">
+  <form class="p-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group mb-3">
+          <label for="fName">First Name <span class="text-danger">*</span></label>
+          <input
+            type="text"
+            placeholder="First Name"
+            id="fName"
+            class="form-control"
+            #fName
+          />
+        </div>
+        <!-- End Single Form -->
+        <div class="form-group mb-3">
+            <label for="lName">Last Name <span class="text-danger">*</span></label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              id="lName"
+              class="form-control"
+            />
+          </div>
+          <!-- End Single Form -->
+          <div class="form-group mb-3">
+            <label for="mail">Email Address <span class="text-danger">*</span></label>
+            <input
+              type="email"
+              placeholder="Email Address"
+              id="mail"
+              class="form-control"
+              
+            />
+          </div>
+          <!-- End Single Form -->
+          <div class="form-group mb-3">
+            <label for="password">Password <span class="text-danger">*</span></label>
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              class="form-control"
+            />
+          </div>
+          <!-- End Single Form -->
+          <div class="form-group mb-3">
+            <label for="confirmPassword">Confirm Password <span class="text-danger">*</span></label>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="confirmPassword"
+              class="form-control"
+            />
+          </div>
+          <!-- End Single Form -->
+
+          <button class="btn btn-success w-100">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

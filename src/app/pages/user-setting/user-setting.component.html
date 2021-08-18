@@ -1,4 +1,8 @@
-<app-header title="User Setting"></app-header>
+<app-header
+  title="User Setting"
+  [hasSidebar]="false"
+  routerLinkSet="/"
+></app-header>
 <div class="wrapper">
   <header class="d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center">
@@ -8,8 +12,8 @@
         alt="{{ users[0].name }}"
       />
       <div class="ms-3">
-        <p class="user-name">{{ users[0].name }}</p>
-        <span class="user-mail">{{ users[0].email }}</span>
+        <p class="user-name">{{ users[1].name }}</p>
+        <span class="user-mail">{{ users[1].email }}</span>
       </div>
     </div>
 
@@ -21,22 +25,18 @@
 
   <ul class="menu-list">
     <li>
-      <a routerLink="/user_setting"
+      <a [routerLink]="users[1].id + '/account'"
         ><i class="bi-person-circle"></i> Account Setting</a
       >
     </li>
     <li>
-      <a routerLink="/user_setting"><i class="bi-translate"></i> Language</a>
-    </li>
-    <li>
-      <a routerLink="/user_setting"><i class="bi-chat-quote"></i> Feedback</a>
-    </li>
-    <li>
-      <a routerLink="/user_setting"><i class="bi-stars"></i> Rate us</a>
+      <a [routerLink]="users[1].id + '/feedback'"
+        ><i class="bi-chat-quote"></i> Feedback</a
+      >
     </li>
     <li>
       <a routerLink="/user_setting"
-        ><i class="bi-cloud-upload"></i> New Version</a
+        ><i class="bi-cloud-upload"></i> What's New</a
       >
     </li>
   </ul>
